@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var detailTableView: UITableView!
     var countryData = [CountryModel]()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,17 +24,13 @@ class ViewController: UIViewController {
         detailTableView.dataSource = self
         self.title = "Counties Data"
     }
-    
+    // Create Refresh Function.
    @IBAction func clickRefreshButton() {
         SDImageCache.shared.clearMemory()
         SDImageCache.shared.clearDisk()
         detailTableView.reloadData()
     }
-    
-
-   
-
-
+//MARK: UITableviewDelegate and DataSource.
 }
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -65,27 +59,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-//MARK:- CheckBoxDelegate
+//MARK: CheckBoxDelegate
 extension ViewController: CheckBoxDelegate {
     func didClickedCheckBox(at index: Int) {
         countryData[index].update(isChecked: !countryData[index].isChecked)
-//        let indexPath = IndexPath(row: index, section: 0)
-//        detailTableView.reloadRows(at: [indexPath], with: .automatic)
+    
     }
 }
-
+// MARK: Create the Alert and Dialoge .
 extension ViewController {
     
     private func didSelectTableViewCell(at index: Int) {
         countryData[index].isChecked ? popUpMessage(with: countryData[index].description) : showAlert()
     }
-    
+   // Create show Alert.
     private func showAlert() {
         let alert = UIAlertController(title: "Titel", message: "Select check mark to see the description", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: false)
     }
-    
+  // Create Dialoge for Meassage.
     private func popUpMessage(with description: String) {
         guard let customAlert = AlertViewController.create() else { return }
         customAlert.providesPresentationContextTransitionStyle = true

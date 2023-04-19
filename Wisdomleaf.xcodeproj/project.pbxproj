@@ -94,15 +94,11 @@
 			children = (
 				F40C7EF229EFBBF900B8740A /* AppDelegate.swift */,
 				F40C7EF429EFBBF900B8740A /* SceneDelegate.swift */,
-				F40C7EF629EFBBF900B8740A /* ViewController.swift */,
-				F4B79E8829EFF9B100CDB3C8 /* AlertViewController.swift */,
-				F40C7F0629EFC89F00B8740A /* CustomTableViewCell.swift */,
-				F40C7F0729EFC89F00B8740A /* CustomTableViewCell.xib */,
-				F40C7F0A29EFDC6D00B8740A /* Model */,
-				F40C7EF829EFBBF900B8740A /* Main.storyboard */,
-				F40C7EFB29EFBBFC00B8740A /* Assets.xcassets */,
-				F40C7EFD29EFBBFC00B8740A /* LaunchScreen.storyboard */,
 				F40C7F0029EFBBFC00B8740A /* Info.plist */,
+				F4B79E8A29F0193500CDB3C8 /* ViewControllers */,
+				F40C7F0A29EFDC6D00B8740A /* Model */,
+				F4B79E8B29F0195000CDB3C8 /* View */,
+				F4B79E8D29F0197500CDB3C8 /* Resources */,
 			);
 			path = Wisdomleaf;
 			sourceTree = "<group>";
@@ -115,6 +111,34 @@
 				F40C7F0D29EFDC9F00B8740A /* CountryDataManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F4B79E8A29F0193500CDB3C8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F40C7EF629EFBBF900B8740A /* ViewController.swift */,
+				F4B79E8829EFF9B100CDB3C8 /* AlertViewController.swift */,
+				F40C7F0629EFC89F00B8740A /* CustomTableViewCell.swift */,
+				F40C7F0729EFC89F00B8740A /* CustomTableViewCell.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F4B79E8B29F0195000CDB3C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F40C7EF829EFBBF900B8740A /* Main.storyboard */,
+				F40C7EFD29EFBBFC00B8740A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4B79E8D29F0197500CDB3C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F40C7EFB29EFBBFC00B8740A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
